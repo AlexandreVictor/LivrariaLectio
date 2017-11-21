@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+    
+    <!-- ############################ MENU ##################################################### -->
+
+	<managed-bean>
+		<managed-bean-name>menuMB</managed-bean-name>
+		<managed-bean-class>br.com.LivrariaLectio.controle.MenuMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<!-- ############################ Livro ################################################## -->
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>livro</from-outcome>
+			<to-view-id>/pages/livro.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<managed-bean>
+		<managed-bean-name>livroMB</managed-bean-name>
+		<managed-bean-class>br.com.LivrariaLectio.controle.LivroMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<!-- ############################ Cliente ################################################## -->
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>cliente</from-outcome>
+			<to-view-id>/pages/cliente.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<managed-bean>
+		<managed-bean-name>clienteMB</managed-bean-name>
+		<managed-bean-class>br.com.LivrariaLectio.controle.ClienteMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+		
+<!-- ################################# CONFIGURACOES ############################## -->
+	
+
+	<application>
+		<message-bundle>com.corejsf.messages</message-bundle>
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+			<supported-locale>en_US</supported-locale>
+		</locale-config>
+		<message-bundle>message</message-bundle>
+	</application>
+	
+	<lifecycle>
+		<phase-listener>br.com.LivrariaLectio.controle.CursoJsfPhaseListener</phase-listener>
+	</lifecycle>
+</faces-config>
