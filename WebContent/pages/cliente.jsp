@@ -10,8 +10,18 @@
 
 
 <f:view>
+<head>
 
-	<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link type="text/css" rel="stylesheet" href="../bootstrap/estilo.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastrar Cliente - Lectio</title>
@@ -37,10 +47,10 @@
 						var="itensPlc" columnClasses="dataTable">
 						<h:column>
 							<a4j:commandLink action="#{clienteMB.excluir}"
-								reRender="listaCarros">
-								<f:param value="#{itensPlc.codcliente}" name="id" />
-								<h:graphicImage value="/images/confirmar.png"
-									style="border: none;" alt="Excluir" />
+								reRender="listaCliente">
+								<f:param value="#{itensPlc.codcliente}" name="codcliente" />
+								  <h:graphicImage value="https://png.icons8.com/delete-bin/dusk/20/000000"
+								 	style="border: none;" alt="Excluir"/>
 							</a4j:commandLink>
 						</h:column>
 						<rich:column>
