@@ -16,7 +16,7 @@ public class Cliente {
 	
 	@Id
 	@GeneratedValue
-	@Column(name ="codcliente",length=11)
+	@Column(name ="codclientes",length=11)
 	private int codcliente;
 	@Column(name ="usuario",length=50)
 	private String usuario;
