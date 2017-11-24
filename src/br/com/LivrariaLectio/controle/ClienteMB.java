@@ -1,7 +1,5 @@
 package br.com.LivrariaLectio.controle;
 
-import java.text.Format;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -9,11 +7,10 @@ import java.util.ResourceBundle;
 import javax.faces.application.FacesMessage;
 import javax.faces.application.FacesMessage.Severity;
 import javax.faces.context.FacesContext;
-import javax.persistence.Column;
+import javax.servlet.http.HttpServletRequest;
 
 import br.com.LivrariaLectio.BO.ClienteBO;
 import br.com.LivrariaLectio.entidade.Cliente;
-import br.com.LivrariaLectio.util.DataUtil;
 
 
 public class ClienteMB {
@@ -50,13 +47,17 @@ public class ClienteMB {
 		nome = "";
 		usuario = "";
 		senha = "";
-		cpf = "";
-		
-	
+		cpf = "";	
 	}
-	
-	
-	public void excluir() {}
+
+	public void excluir() {
+		HttpServletRequest req = (HttpServletRequest) context .getExternalContext().getRequest();
+		String parametro = req.getParameter("codcliente");
+		Cliente cliente = bo.recuperar(Integer.parseInt(parametro));
+		bo.excluir(cliente);
+		Severity info = FacesMessage.SEVERITY_INFO;
+		context.addMessage(null, new FacesMessage(info, bundle.getString("registroExcluido"), ""));
+	}
 	
 	/*pega todos os cliente que foram incluidos*/
 	
@@ -119,12 +120,12 @@ public class ClienteMB {
 		this.datanascimento = datanascimento;
 	}
 
+	public int getCodcliente() {
+		return codcliente;
+	}
 
+	public void setCodcliente(int codcliente) {
+		this.codcliente = codcliente;
+	}
 
-	
-	
-	
-	
-	
-	
 }

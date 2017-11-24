@@ -25,7 +25,7 @@ public class ClienteBO {
 	} 
 	
 	
-	private void excluir(Cliente cliente) {
+	public void excluir(Cliente cliente) {
 		clienteDAO.excluir(cliente);
 	}
 	

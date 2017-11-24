@@ -14,11 +14,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Livraria - Lectio</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link type="text/css" rel="stylesheet" href="../bootstrap/estilo.css" />
+
 </head>
 <f:subview id="menu">
 	<body>
 		<h:form>
-		<h:graphicImage url="/imagens/header.png" width="100%"></h:graphicImage>
+		<h:graphicImage url="/imagens/headers.png" 
+						style=" border-right-width: 10px;
+							    padding-left: 71px;
+							    height: 160px;
+							    width: 1010px;
+							    padding-bottom: 15px;
+							    padding-top: 10px;
+							    padding-right: 70px;">
+		</h:graphicImage>
 			<a4j:keepAlive beanName="menuMB" ajaxOnly="true"/>
 			<table width="100%">
 				<tr>

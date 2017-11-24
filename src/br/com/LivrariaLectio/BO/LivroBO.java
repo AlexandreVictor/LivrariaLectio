@@ -16,7 +16,7 @@ public class LivroBO {
 		livroDAO.incluir(livro);
 	}
 	
-	private void atualizar(Livro livro) {
+	public void atualizar(Livro livro) {
 		livroDAO.atualizar(livro);
 	}
 	
@@ -25,7 +25,7 @@ public class LivroBO {
 	} 
 	
 	
-	private void excluir(Livro livro) {
+	public void excluir(Livro livro) {
 		livroDAO.excluir(livro);
 	}
 	
