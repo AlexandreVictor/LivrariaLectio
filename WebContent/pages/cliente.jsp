@@ -38,16 +38,16 @@
 						handler="#{rich:element('botaoGravar')}.click()" />
 					<p align="left">
 						<a4j:commandButton action="#{clienteMB.gravar}" id="botaoGravar"
-							value="Gravar" reRender="listalivro"></a4j:commandButton>
+							value="Gravar" reRender="ListaCliente"></a4j:commandButton>
 					</p></td>
 			</tr>
 			<rich:panel header="Cadastro">
 				<h:panelGrid style="border:none;" columns="2">
-					<rich:dataTable id="listaCarros" value="#{clienteMB.listaCliente}"
+					<rich:dataTable id="ListaCliente" value="#{clienteMB.listaCliente}"
 						var="itensPlc" columnClasses="dataTable">
 						<h:column>
 							<a4j:commandLink action="#{clienteMB.excluir}"
-								reRender="listaCliente">
+								reRender="ListaCliente">
 								<f:param value="#{itensPlc.codcliente}" name="codcliente" />
 								  <h:graphicImage value="https://png.icons8.com/delete-bin/dusk/20/000000"
 								 	style="border: none;" alt="Excluir"/>
@@ -91,7 +91,7 @@
 							<rich:columnGroup>
 								<rich:column>
 									<h:selectBooleanCheckbox value="" id="indSelecionado"
-										disabled="true" />
+										disabled="true"/>
 								</rich:column>
 								<rich:column>
 									<h:inputText value="#{clienteMB.nome}" size="40" maxlength="35"

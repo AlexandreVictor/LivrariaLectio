@@ -40,16 +40,16 @@
 						handler="#{rich:element('botaoGravar')}.click()" />
 					<p align="left">
 						<a4j:commandButton action="#{livroMB.gravar}" id="botaoGravar"
-							value="Gravar" reRender="listalivro"></a4j:commandButton>
+							value="Gravar" reRender="ListaLivro"></a4j:commandButton>
 					</p></td>
 			</tr>
 			<rich:panel header="Cadastro">
 				<h:panelGrid style="border:none;" columns="2">
-					<rich:dataTable id="listaCarros" value="#{livroMB.listaLivro}"
+					<rich:dataTable id="ListaLivro" value="#{livroMB.listaLivro}"
 						var="itensPlc" columnClasses="dataTable" headerClass="table table-inverse">
 						<h:column>
 							<a4j:commandLink action="#{livroMB.excluir}"
-								reRender="listaLivros">
+								reRender="ListaLivro">
 								<f:param value="#{itensPlc.codlivro}" name="codlivro" />
 								<h:graphicImage value="https://png.icons8.com/delete-bin/dusk/20/000000"
 									style="border: none;" alt="Excluir" />
@@ -82,7 +82,7 @@
 							</f:facet>
 							<h:outputText value="#{itensPlc.quantidade}"></h:outputText>
 						</rich:column>
-						
+						 
 						<f:facet name="footer">
 							<rich:columnGroup>
 								<rich:column>

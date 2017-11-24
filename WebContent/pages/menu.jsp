@@ -30,7 +30,15 @@
 <f:subview id="menu">
 	<body>
 		<h:form>
-		<h:graphicImage url="/imagens/header.png" width="100%"></h:graphicImage>
+		<h:graphicImage url="/imagens/headers.png" 
+						style=" border-right-width: 10px;
+							    padding-left: 71px;
+							    height: 160px;
+							    width: 1010px;
+							    padding-bottom: 15px;
+							    padding-top: 10px;
+							    padding-right: 70px;">
+		</h:graphicImage>
 			<a4j:keepAlive beanName="menuMB" ajaxOnly="true"/>
 			<table width="100%">
 				<tr>
